@@ -12,6 +12,7 @@ function indent() {
 BUILD_DIR=$1
 CACHE_DIR=$2
 
+mkdir -p $CACHE_DIR
 DEB="$CACHE_DIR/wkhtmltopdf.deb"
 TS=`date +%s`
 if [ ! -f $DEB ]; then
