@@ -17,7 +17,8 @@ TS=`date +%s`
 if [ ! -f $DEB ]; then
   WKHTMLTOPDF_DOWNLOAD_URL="http://downloads.sourceforge.net/project/wkhtmltopdf/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb?r=&ts=$TS&use_mirror=ufpr"
   echo "-----> Downloading wkhtmltopdf: $WKHTMLTOPDF_DOWNLOAD_URL"
-  curl -L --silent -o $DEB $WKHTMLTOPDF_DOWNLOAD_URL
+  #curl -L --silent -o $DEB $WKHTMLTOPDF_DOWNLOAD_URL
+  curl -L -o $DEB $WKHTMLTOPDF_DOWNLOAD_URL
 fi
 
 echo "-----> Installing wkhtmltopdf 0.12.2.1"
