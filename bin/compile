@@ -30,7 +30,8 @@ dpkg -x $DEB $BUILD_DIR/.apt/
 echo "--- test installation"
 ls
 echo "--- test2"
-cd $BUILD_DIR/.apt/
+#cd $BUILD_DIR/.apt/
+cd $BUILD_DIR
 ls
 wkhtmltopdf --version
 
