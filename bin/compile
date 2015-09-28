@@ -29,6 +29,7 @@ dpkg -x $DEB $BUILD_DIR/.apt/
 
 echo "Writing profile script" | indent
 mkdir -p $BUILD_DIR/.profile.d
+#erstellt eine bash profile datei, damit dort Pfad für binary setzen kann
 cat <<EOF >$BUILD_DIR/.profile.d/wkhtmltopdf.sh
 export PATH="\$HOME/.apt/usr/local/bin:\$PATH"
 export LD_LIBRARY_PATH="\$HOME/.apt/usr/local/lib/x86_64-linux-gnu:\$HOME/.apt/usr/local/lib/i386-linux-gnu:\$HOME/.apt/usr/local/lib:\$LD_LIBRARY_PATH"
