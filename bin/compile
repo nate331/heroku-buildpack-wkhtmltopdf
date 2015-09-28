@@ -27,6 +27,13 @@ echo "-----> Installing wkhtmltopdf 0.12.2.1"
 mkdir -p $BUILD_DIR/.apt
 dpkg -x $DEB $BUILD_DIR/.apt/
 
+echo "--- test installation"
+ls
+echo "--- test2"
+cd $BUILD_DIR/.apt/
+ls
+wkhtmltopdf --version
+
 echo "Writing profile script" | indent
 mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF >$BUILD_DIR/.profile.d/wkhtmltopdf.sh
