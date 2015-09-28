@@ -27,10 +27,10 @@ echo "-----> Installing wkhtmltopdf 0.12.2.1"
 mkdir -p $BUILD_DIR/.apt
 dpkg -x $DEB $BUILD_DIR/.apt/
 
-echo "--- test installation"
-ln -s $BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf
+#echo "--- test installation"
+#ln -s $BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf # does not work because read only
 #$BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf --version
-wkhtmltopdf --version
+#wkhtmltopdf --version
 
 echo "Writing profile script" | indent
 mkdir -p $BUILD_DIR/.profile.d
