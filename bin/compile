@@ -28,12 +28,7 @@ mkdir -p $BUILD_DIR/.apt
 dpkg -x $DEB $BUILD_DIR/.apt/
 
 echo "--- test installation"
-ls
-echo "--- test2"
-#cd $BUILD_DIR/.apt/
-cd $BUILD_DIR
-ls
-wkhtmltopdf --version
+$BUILD_DIR/.apt/usr/local/bin/wkhtmltopdf --version
 
 echo "Writing profile script" | indent
 mkdir -p $BUILD_DIR/.profile.d
